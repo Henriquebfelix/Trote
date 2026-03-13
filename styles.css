@@ -34,6 +34,13 @@ body {
     margin: 0; 
     padding: 0;
 }
-.lista li {
+.lista a     {
     color: #cbdcf7;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.lista a:hover {
+    color: #fff;
 }
