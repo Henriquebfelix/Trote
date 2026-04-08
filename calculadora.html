@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Introdução</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="menu-principal">
+            <div class="menu-container">
+                <a href="index.html" class="logo">Trote 2026</a>
+                <ul class="lista">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="introducao.html">Introdução</a></li>
+                    <li><a href="formato.html">Formato</a></li>
+                    <li><a href="equipes.html">Equipes</a></li>
+                    <li><a href="provas.html">Provas e Metas</a></li>
+                    <li><a href="integracao.html">Integração</a></li>
+                    <li><a href="cronograma.html">Cronograma</a></li>
+                    <li><a href="calculadora.html">Calculadora</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="cabecalho">
+            <img src="facef.png" style="width: 300px; height: auto; class="logo">
+            <h1>Trote Solidário</h1>
+            <h2>"Colecionando memórias de Solidariedade"</h2>
+        </header>
+        <main class="principal">
+            <section class="sessao">
+                <h3>Simulador de Pontos - Itens Avulsos</h3>
+                <div>
+                    <div class="form-grupo">
+                        <label>Arroz (5kg)</label>
+                        <input type="number" value="0" min="0" id="qtDeArroz"/>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Feijao (2kg)</label>
+                        <input type="number" value="0" min="0" id="qtDeFeijao"/>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Oleo (1L)</label>
+                        <input type="number" value="0" min="0" id="qtDeOleo"/>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Macarrao (500G)</label>
+                        <input type="number" value="0" min="0" id="qtDeMacarrao"/>
+                    </div>
+                    <button onclick="calcular()"> Calcular Total</button>
+                    <div id="result" class="resultado"">
+                        Pontuaçao Total: 0 Pontos
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="rodape">
+        <p> Coordenação Trote Solidário 2026: trotesolidario@facef.br </p>
+        <p> Uni-FACEF - Centro Universitário Municipal de Franca. </p>
+        <script>
+            function calcular() {
+                let qtDeArroz = Number(document.getElementById("qtDeArroz").value)
+                let qtDeFeijao = Number(document.getElementById("qtDeFeijao").value)
+                let qtDeOleo = Number(document.getElementById("qtDeOleo").value)
+                let qtDeMacarrao = Number(document.getElementById("qtDeMacarrao").value)
+                let pontos = (qtDeArroz * 10) + (qtDeFeijao * 8) + (qtDeMacarrao * 4) + (qtDeOleo * 2)
+                document.getElementById("result").innerText = " Pontuaçao: " + pontos
+            }
+        </script>
+    </body>
+</html>
